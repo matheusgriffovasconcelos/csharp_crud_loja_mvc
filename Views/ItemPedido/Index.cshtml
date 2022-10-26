@@ -1,51 +1,52 @@
 @model PedidoModel
 
 <link rel="stylesheet" href="~/css/tabelas.css">
+<link rel="stylesheet" href="~/css/estilos.css">
 
 <h1>Itens do Pedido <span class="text-primary">@Model.Id.ToString("D6")</span></h1><br>
-<hr>
-<a asp-action="Cadastrar" class="btn btn-primary" asp-route-idPedido="@Model.Id">
-    <i class="bi bi-plus"></i>
-    Novo Item
-</a>
-<hr>
-@if (Model.Itens.Count() > 0)
-{
-    <table class="table table-sm table-striped table-hover table-itens">
-        <thead class="bg-dark bg-gradient text-white">
-            <tr>
-                <th>Produto</th>
-                <th>Quantidade</th>
-                <th>Valor Unit.</th>
-                <th>Valor Item</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var item in Model.Itens)
-            {
+<div class="btn-superiores-itempedido">
+    <hr>
+    <a asp-action="Cadastrar" class="btn btn-primary" asp-route-idPedido="@Model.Id">
+        <i class="bi bi-plus"></i>
+        Novo Item
+    </a>
+    <a class="btn btn-secondary bi bi-arrow-return-left" asp-controller="Pedido" asp-action="Index"> Voltar para Pedidos</a>
+    <hr>
+    @if (Model.Itens.Count() > 0)
+    {
+        <table class="table table-sm table-striped table-hover table-itens">
+            <thead class="bg-dark bg-gradient text-white">
                 <tr>
-                    <td>@item.Produto.Nome</td>
-                    <td>@item.Quantidade</td>
-                    <td>@item.ValorUnitario.ToString("C")</td>
-                    <td>@item.ValorItem.ToString("C")</td>
-                    <td>
-                        <a class="btn btn-success btn-sm" asp-action="Alterar" asp-route-idPedido="@item.IdPedido"
-                    asp-route-idProduto="@item.IdProduto" title="Alterar">
-                            <i class="bi bi-pencil"></i>
-                        </a>
-
-                        <a class="btn btn-danger btn-sm" asp-action="Excluir" asp-route-idPedido="@item.IdPedido"
-                    asp-route-idProduto="@item.IdProduto" title="Excluir">
-                            <i class="bi bi-trash"></i>
-                        </a>
-                    </td>
+                    <th>Produto</th>
+                    <th>Quantidade</th>
+                    <th>Valor Unit.</th>
+                    <th>Valor Item</th>
+                    <th>Ações</th>
                 </tr>
-            }
-        </tbody>
-    </table>
-}
-else
-{
-    <h3>Não há itens neste pedido.</h3>
-}
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Itens)
+                {
+                    <tr>
+                        <td>@item.Produto.Nome</td>
+                        <td>@item.Quantidade</td>
+                        <td>@item.ValorUnitario.ToString("C")</td>
+                        <td>@item.ValorItem.ToString("C")</td>
+                        <td>
+                            <a class="btn btn-success btn-sm" asp-action="Alterar" asp-route-idPedido="@item.IdPedido" asp-route-idProduto="@item.IdProduto" title="Alterar">
+                                <i class="bi bi-pencil"></i>
+                            </a>
+
+                            <a class="btn btn-danger btn-sm" asp-action="Excluir" asp-route-idPedido="@item.IdPedido" asp-route-idProduto="@item.IdProduto" title="Excluir">
+                                <i class="bi bi-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <h3>Não há itens neste pedido.</h3>
+    }
