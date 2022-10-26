@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lib/bootstrap5/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/lib/bootstrap-icons/bootstrap-icons.css">
+    <script src="/lib/bootstrap5/dist/js/bootstrap.bundle.min.js" defer></script>
+    <title>Loja Virtual</title>
+</head>
+
+<body class="pb-5">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark text-bg-primary">
+        <div class="container mb-2">
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><i class="bi bi-shop"></i> <b>Loja Virtual</b></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuResponsivo">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="menuResponsivo">
+                <ul class="navbar-nav mt-0">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-sm bi bi-shop" asp-controller="Home"
+                            asp-action="Index"><b> Principal</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-sm bi bi-collection-fill" asp-controller="Categoria"
+                            asp-action="Index"><b> Categorias</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn bi bi-box-seam-fill" asp-controller="Produto"
+                            asp-action="Index"><b> Produtos</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn bi bi-person-lines-fill" asp-controller="Cliente"
+                            asp-action="Index"><b> Clientes</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn bi bi-bag-fill" asp-controller="Pedido"
+                            asp-action="Index"><b> Pedidos</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-2">
+        @RenderBody()
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer class="py-1 bg-dark text-white bg-dark text-center fixed-bottom text-opacity-50">
+        <p class="estilo-fonte">Desenvolvido por Matheus Vasconcelos &copy; @DateTime.Now.Year.ToString()<br>
+        Todos os direitos reservados</p>
+    </footer>
+</body>
+
+</html>

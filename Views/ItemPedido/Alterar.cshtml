@@ -1,0 +1,22 @@
+@model ItemPedidoModel
+
+<h2>Alteração de Item do Pedido <span class="text-primary">@Model.IdPedido.ToString("D6")</span>
+</h2>
+<hr>
+<form method="post">
+    <input type="hidden" asp-for="@Model.IdPedido">
+    <input type="hidden" asp-for="@Model.IdProduto">
+    <h4>Produto: @Model.Produto.Nome</h4>
+
+    <div class="form-floating mb-3">
+        <input type="number" class="form-control" placeholder="ItemPedido" asp-for="@Model.Quantidade">
+        <label asp-for="@Model.Quantidade"></label><br>
+        <span class="text-danger" asp-validation-for="@Model.Quantidade"></span>
+    </div>
+
+    <p>
+        <a asp-action="Index" asp-route-idPedido="@Model.IdPedido"><button type="button" class="btn btn-secondary">Cancelar</button></a>
+
+        <input type="submit" value="Salvar" class="btn btn-primary">
+    </p>
+</form>

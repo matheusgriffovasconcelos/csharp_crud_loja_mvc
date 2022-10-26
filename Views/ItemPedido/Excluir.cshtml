@@ -1,0 +1,18 @@
+@model ItemPedidoModel
+
+<h2>Exclusão de Item do Pedido <span class="text-primary">
+        @Model.IdPedido.ToString("D6")</span>
+</h2>
+<hr>
+<h3>Deseja realmente excluir o produto
+    <span class="text-danger">@Model.Produto.Nome</span> deste pedido?
+</h3>
+<form method="post" asp-action="ProcessarExclusao" class="mt-3">
+    <input type="hidden" asp-for="@Model.IdPedido">
+    <input type="hidden" asp-for="@Model.IdProduto">
+    <p>
+        <a asp-action="Index" asp-route-idPedido="@Model.IdPedido"><button type="button" class="btn btn-success">Não</button></a>
+
+        <input type="submit" value="Sim" class="btn btn-danger">
+    </p>
+</form>

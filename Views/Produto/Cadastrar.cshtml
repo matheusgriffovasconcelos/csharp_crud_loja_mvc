@@ -1,0 +1,40 @@
+@model ProdutoModel
+
+<div class="container">
+    <h2 class="text-primary">Cadastro de Produto</h2>
+    <hr>
+    <form asp-action="Cadastrar" method="post">
+        <input type="hidden" asp-for="@Model.Id">
+        
+        <div class="form-floating">
+            <input type="text" class="form-control" placeholder="" asp-for="@Model.Nome">
+            <label asp-for="@Model.Nome"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.Nome"></span>
+        </div>
+        
+        <div class="form-floating">
+            <input type="text" class="form-control" placeholder="" asp-for="@Model.Estoque">
+            <label asp-for="@Model.Estoque"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.Preco"></span>
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" placeholder="" asp-for="@Model.Preco">
+            <label asp-for="@Model.Preco"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.Preco"></span>
+        </div>
+
+        <div class="form-floating mb-4">
+            <select asp-for="@Model.IdCategoria" asp-items="@ViewBag.Categorias" class="form-select">
+                <option value="">Selecione a categoria...</option>
+            </select>
+            <label asp-for="@Model.IdCategoria"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.IdCategoria"></span>
+        </div>
+        <div>
+            <input type="submit" class="btn btn-sm btn-success" value="Salvar">
+            <a asp-action="Index" class="btn btn-sm btn-danger">Cancelar</a>
+        </div>
+
+    </form>
+</div>

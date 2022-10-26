@@ -1,0 +1,19 @@
+@model PedidoModel
+
+<h2>Alteração de Pedido</h2>
+<hr>
+<form method="post">
+    
+    <div class="form-floating mb-4">
+        <select asp-for="@Model.IdCliente" asp-items="@ViewBag.Clientes" class="form-select">
+            <option value="">Selecione o cliente...</option>
+        </select>
+        <label asp-for="@Model.IdCliente"></label>
+        <span class="text-danger" asp-validation-for="@Model.IdCliente"></span>
+    </div>
+    <p>
+        <a asp-action="Index"><button type="button" class="btn btn-secondary">Cancelar</button></a>
+
+        <input type="submit" value="Salvar" class="btn btn-primary">
+    </p>
+</form>

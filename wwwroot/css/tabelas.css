@@ -1,0 +1,24 @@
+
+.tabela-categorias tr > th:last-child,
+.tabela-categorias tr > td:last-child
+{
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tabela-produtos tr > th:last-child,
+.tabela-produtos tr > td:last-child
+{
+    width: 1%;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.tabela-categorias thead th,
+.tabela-produtos thead th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

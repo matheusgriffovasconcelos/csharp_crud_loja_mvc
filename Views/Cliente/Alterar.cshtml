@@ -1,0 +1,59 @@
+@model ClienteModel
+
+<div class="container">
+    <h2 class="text-primary">Cadastro de Cliente</h2>
+    <hr>
+    <form asp-action="Alterar" method="post">
+        <input type="hidden" asp-for="@Model.Id">
+        
+        <div class="form-floating">
+            <input type="text" class="form-control" placeholder="" asp-for="@Model.Nome">
+            <label asp-for="@Model.Nome"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.Nome"></span>
+        </div>
+        
+        <div class="form-floating">
+            <input type="email" class="form-control" placeholder="" asp-for="@Model.Email">
+            <label asp-for="@Model.Email"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.Email"></span>
+        </div>
+
+        <div class="form-floating">
+            <input type="tel" class="form-control" placeholder="" asp-for="@Model.Telefone">
+            <label asp-for="@Model.Telefone"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.Telefone"></span>
+        </div>
+
+        <div class="form-floating">
+            <input type="date" class="form-control" placeholder="" asp-for="@Model.DataNascimento">
+            <label asp-for="@Model.DataNascimento"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.DataNascimento"></span>
+        </div>
+
+        <div class="form-floating">
+            <input type="number" class="form-control" placeholder="" asp-for="@Model.Dependentes">
+            <label asp-for="@Model.Dependentes"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.Dependentes"></span>
+        </div>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" placeholder="" asp-for="@Model.LimiteCredito">
+            <label asp-for="@Model.LimiteCredito"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.LimiteCredito"></span>
+        </div>
+
+        <div class="form-check-label">
+            <input type="checkbox" class="form-check" placeholder="" asp-for="@Model.Vip">
+            <label asp-for="@Model.Vip"></label><br>
+            <span class="text-danger" asp-validation-for="@Model.Vip"></span>
+        </div>
+
+        <div>
+            <input type="submit" class="btn btn-sm btn-success" value="Salvar">
+            <a asp-action="Index" class="btn btn-sm btn-danger">Cancelar</a>
+        </div>
+
+    </form>
+</div>
+
+
