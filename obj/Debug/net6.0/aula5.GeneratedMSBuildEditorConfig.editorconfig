@@ -6,107 +6,107 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = aula5
-build_property.RootNamespace = aula5
-build_property.ProjectDir = c:\PW2022\Loja_Crud\
+build_property.RootNamespace = Aula5
+build_property.RootNamespace = Aula5
+build_property.ProjectDir = C:\PW2022\Loja_Crud\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = true
-build_property.MSBuildProjectDirectory = c:\PW2022\Loja_Crud
+build_property.MSBuildProjectDirectory = C:\PW2022\Loja_Crud
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/PW2022/Loja_Crud/Views/Categoria/Alterar.cshtml]
+[C:/PW2022/Loja_Crud/Views/Categoria/Alterar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEFsdGVyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Categoria/Cadastrar.cshtml]
+[C:/PW2022/Loja_Crud/Views/Categoria/Cadastrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXENhZGFzdHJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Categoria/Excluir.cshtml]
+[C:/PW2022/Loja_Crud/Views/Categoria/Excluir.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEV4Y2x1aXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Categoria/Index.cshtml]
+[C:/PW2022/Loja_Crud/Views/Categoria/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmlhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Cliente/Alterar.cshtml]
+[C:/PW2022/Loja_Crud/Views/Cliente/Alterar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxBbHRlcmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Cliente/Cadastrar.cshtml]
+[C:/PW2022/Loja_Crud/Views/Cliente/Cadastrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxDYWRhc3RyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Cliente/Excluir.cshtml]
+[C:/PW2022/Loja_Crud/Views/Cliente/Excluir.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxFeGNsdWlyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Cliente/Index.cshtml]
+[C:/PW2022/Loja_Crud/Views/Cliente/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Home/Index.cshtml]
+[C:/PW2022/Loja_Crud/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/ItemPedido/Alterar.cshtml]
+[C:/PW2022/Loja_Crud/Views/ItemPedido/Alterar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVBlZGlkb1xBbHRlcmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/ItemPedido/Cadastrar.cshtml]
+[C:/PW2022/Loja_Crud/Views/ItemPedido/Cadastrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVBlZGlkb1xDYWRhc3RyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/ItemPedido/Excluir.cshtml]
+[C:/PW2022/Loja_Crud/Views/ItemPedido/Excluir.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVBlZGlkb1xFeGNsdWlyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/ItemPedido/Index.cshtml]
+[C:/PW2022/Loja_Crud/Views/ItemPedido/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbVBlZGlkb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Pedido/Alterar.cshtml]
+[C:/PW2022/Loja_Crud/Views/Pedido/Alterar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXEFsdGVyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Pedido/Cadastrar.cshtml]
+[C:/PW2022/Loja_Crud/Views/Pedido/Cadastrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXENhZGFzdHJhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Pedido/Excluir.cshtml]
+[C:/PW2022/Loja_Crud/Views/Pedido/Excluir.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXEV4Y2x1aXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Pedido/Index.cshtml]
+[C:/PW2022/Loja_Crud/Views/Pedido/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGVkaWRvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Produto/Alterar.cshtml]
+[C:/PW2022/Loja_Crud/Views/Produto/Alterar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xBbHRlcmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Produto/Cadastrar.cshtml]
+[C:/PW2022/Loja_Crud/Views/Produto/Cadastrar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xDYWRhc3RyYXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Produto/Excluir.cshtml]
+[C:/PW2022/Loja_Crud/Views/Produto/Excluir.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xFeGNsdWlyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Produto/Index.cshtml]
+[C:/PW2022/Loja_Crud/Views/Produto/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/Shared/_Layout.cshtml]
+[C:/PW2022/Loja_Crud/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/_ViewImports.cshtml]
+[C:/PW2022/Loja_Crud/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/PW2022/Loja_Crud/Views/_ViewStart.cshtml]
+[C:/PW2022/Loja_Crud/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
