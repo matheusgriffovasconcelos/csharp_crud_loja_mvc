@@ -1,2 +1,2 @@
 # Crud_Loja_MVC_AspnetCore
-CRUD de uma Loja utilizando Asp.net.core arquitetura padrão MVC
+Projeto de CRUD de uma Loja utilizando C# Asp.Net.Core arquitetura padrão MVC
