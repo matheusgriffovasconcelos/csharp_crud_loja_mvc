@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Aula5.Models;
+namespace controleEstoque.Models;
 
 public class ItemPedidoModel
 {

@@ -1,7 +1,7 @@
-using Aula5.Models;
+using controleEstoque.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aula5.Data;
+namespace controleEstoque.Data;
 public class AppDbContext : DbContext
 {
     public DbSet<CategoriaModel> Categorias { get; set; }

@@ -1,10 +1,10 @@
 using System.Linq;
-using Aula5.Data;
-using Aula5.Models;
+using controleEstoque.Data;
+using controleEstoque.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aula5.Controllers;
+namespace controleEstoque.Controllers;
 public class CategoriaController : Controller
 {
     private readonly AppDbContext _db;
@@ -28,7 +28,7 @@ public class CategoriaController : Controller
     [HttpPost]
     public IActionResult Cadastrar(CategoriaModel categoria)
     {
-        if(!ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
             return View(categoria);
         }
@@ -43,7 +43,7 @@ public class CategoriaController : Controller
     public IActionResult Alterar(int id)
     {
         var categoria = _db.Categorias.Find(id);
-        if(categoria is null)
+        if (categoria is null)
         {
             return RedirectToAction("Index");
         }
@@ -54,12 +54,12 @@ public class CategoriaController : Controller
     public IActionResult Alterar(int id, CategoriaModel categoria)
     {
         var categoriaOriginal = _db.Categorias.Find(id);
-        if(categoriaOriginal is null)
+        if (categoriaOriginal is null)
         {
             return RedirectToAction("Index");
         }
 
-        if(!ModelState.IsValid)
+        if (!ModelState.IsValid)
         {
             return View(categoria);
         }
@@ -72,7 +72,7 @@ public class CategoriaController : Controller
     public IActionResult Excluir(int id)
     {
         var categoria = _db.Categorias.Find(id);
-        if(categoria is null)
+        if (categoria is null)
         {
             return RedirectToAction("Index");
         }
@@ -83,7 +83,7 @@ public class CategoriaController : Controller
     public IActionResult ProcessarExclusao(int id)
     {
         var categoriaOriginal = _db.Categorias.Find(id);
-        if(categoriaOriginal is null)
+        if (categoriaOriginal is null)
         {
             return RedirectToAction("Index");
         }

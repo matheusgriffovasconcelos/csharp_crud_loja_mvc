@@ -6,11 +6,11 @@
 <h1>Itens do Pedido <span class="text-primary">@Model.Id.ToString("D6")</span></h1><br>
 <div class="btn-superiores-itempedido">
     <hr>
+    <a class="btn btn-secondary bi bi-arrow-return-left" asp-controller="Pedido" asp-action="Index"> Pedidos</a>
     <a asp-action="Cadastrar" class="btn btn-primary" asp-route-idPedido="@Model.Id">
         <i class="bi bi-plus"></i>
         Novo Item
     </a>
-    <a class="btn btn-secondary bi bi-arrow-return-left" asp-controller="Pedido" asp-action="Index"> Voltar para Pedidos</a>
     <hr>
     @if (Model.Itens.Count() > 0)
     {

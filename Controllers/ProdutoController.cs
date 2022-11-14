@@ -1,18 +1,22 @@
-using Aula5.Data;
-using Aula5.Models;
+using controleEstoque.Data;
+using controleEstoque.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 
-namespace Aula5.Controllers;
+namespace controleEstoque.Controllers;
 
 public class ProdutoController : Controller
 {
     private readonly AppDbContext _db;
+    private readonly IWebHostEnvironment _env;
 
-    public ProdutoController(AppDbContext db)
+    public ProdutoController(AppDbContext db, IWebHostEnvironment env)
     {
         _db = db;
+        _env = env;
     }
 
     public IActionResult Index()
@@ -50,7 +54,11 @@ public class ProdutoController : Controller
             return View(produto);
         }
         _db.Produtos.Add(produto);
-        _db.SaveChanges();
+        if (_db.SaveChanges() > 0)
+        {
+            var caminhoImagem = $"{_env.WebRootPath}//img//produto//{produto.Id.ToString("D6")}.jpg";
+            SalvarUploadImagemAsync(caminhoImagem, produto.ArquivoImagem).Wait();
+        }
         return RedirectToAction("Index");
     }
 
@@ -74,6 +82,7 @@ public class ProdutoController : Controller
         {
             return RedirectToAction("Index");
         }
+        ModelState.Remove("ArquivoImagem");
         if (!ModelState.IsValid)
         {
             CarregarCategorias(produto.IdCategoria);
@@ -84,6 +93,11 @@ public class ProdutoController : Controller
         produtoOriginal.Preco = produto.Preco;
         produtoOriginal.IdCategoria = produto.IdCategoria;
         _db.SaveChanges();
+        if (produto.ArquivoImagem is not null)
+        {
+            var caminhoImagem = $"{_env.WebRootPath}//img//produto//{produto.Id.ToString("D6")}.jpg";
+            SalvarUploadImagemAsync(caminhoImagem, produto.ArquivoImagem).Wait();
+        }
         return RedirectToAction("Index");
     }
 
@@ -109,5 +123,35 @@ public class ProdutoController : Controller
         _db.Produtos.Remove(produtoOriginal);
         _db.SaveChanges();
         return RedirectToAction("Index");
+    }
+
+    public async Task<bool> SalvarUploadImagemAsync(
+        string caminhoArquivoImagem, IFormFile imagem,
+        bool salvarQuadrada = true)
+    {
+        if (imagem is null)
+        {
+            return false;
+        }
+        var ms = new MemoryStream();
+        await imagem.CopyToAsync(ms);
+        ms.Position = 0;
+        var img = await Image.LoadAsync(ms);
+
+        if (salvarQuadrada)
+        {
+            var tamanho = img.Size();
+            var ladoMenor = (tamanho.Height < tamanho.Width) ? tamanho.Height : tamanho.Width;
+            img.Mutate(i =>
+                i.Resize(new ResizeOptions()
+                {
+                    Size = new Size(ladoMenor, ladoMenor),
+                    Mode = ResizeMode.Crop
+                })
+            );
+        }
+
+        await img.SaveAsJpegAsync(caminhoArquivoImagem);
+        return true;
     }
 }

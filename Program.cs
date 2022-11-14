@@ -1,4 +1,4 @@
-using Aula5.Data;
+using controleEstoque.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

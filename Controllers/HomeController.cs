@@ -1,8 +1,8 @@
 using System.Linq;
-using Aula5.Data;
+using controleEstoque.Data;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Aula5.Controllers;
+namespace controleEstoque.Controllers;
 public class HomeController : Controller
 {
     private readonly AppDbContext _db;
@@ -12,7 +12,7 @@ public class HomeController : Controller
     }
     public IActionResult Index()
     {
-        
+
         return View();
     }
 

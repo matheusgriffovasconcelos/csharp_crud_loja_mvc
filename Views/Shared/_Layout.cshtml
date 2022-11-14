@@ -5,16 +5,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/lib/bootstrap5/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="/lib/bootstrap-icons/bootstrap-icons.css">
-    <script src="/lib/bootstrap5/dist/js/bootstrap.bundle.min.js" defer></script>
-    <title>Loja Virtual</title>
+    <link rel="stylesheet" href="cards.css">
+    <script src="https://kit.fontawesome.com/95a02bd20d.js"></script>
+    <link rel="stylesheet" href="~/lib/bootstrap5/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="~/lib/bootstrap-icons/bootstrap-icons.css">
+    <script src="~/lib/bootstrap5/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="stylesheet" href="~/lib/lightbox2/dist/css/lightbox.min.css">
+    <script src="~/lib/lightbox2/dist/js/lightbox-plus-jquery.min.js" defer></script>
+    <title>Controle de Estoque</title>
 </head>
 
-<body class="pb-5">
+<body class="bg-image pb-5"
+  style="
+    background-image: url(bg-papel.png);
+    height: 100vh;">
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark text-bg-primary">
         <div class="container mb-2">
-            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><i class="bi bi-shop"></i> <b>Loja Virtual</b></a>
+            <a class="navbar-brand" asp-controller="Home" asp-action="Index"><i class="bi bi-shop"></i> <b>Controle de Estoque</b></a>
             <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#menuResponsivo">
                 <span class="navbar-toggler-icon"></span>
@@ -46,13 +53,13 @@
         </div>
     </nav>
 
-    <div class="container mt-2">
+    <div class="container pt-4">
         @RenderBody()
     </div>
-    <br>
-    <br>
-    <br>
-    <footer class="py-1 bg-dark text-white bg-dark text-center fixed-bottom text-opacity-50">
+
+    <div class="p-5"></div>
+
+    <footer class="py-3 bg-dark text-white bg-dark text-center fixed-bottom">
         <p class="estilo-fonte">Desenvolvido por Matheus Vasconcelos &copy; @DateTime.Now.Year.ToString()<br>
         Todos os direitos reservados</p>
     </footer>

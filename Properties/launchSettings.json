@@ -8,7 +8,7 @@
     }
   },
   "profiles": {
-    "Aula5": {
+    "controleEstoque": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": true,

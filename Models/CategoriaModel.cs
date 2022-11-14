@@ -1,7 +1,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace Aula5.Models;
+namespace controleEstoque.Models;
 public class CategoriaModel
 {
 
@@ -9,7 +9,7 @@ public class CategoriaModel
     [Display(Name = "Código")]
     public int Id { get; set; }
 
-    [Required(ErrorMessage = "O campo {0} é de preenchimento obrigatório.")] 
+    [Required(ErrorMessage = "O campo {0} é de preenchimento obrigatório.")]
     [StringLength(64, ErrorMessage = "O Campo {0} comporta até {1} caracteres apenas.")]
     [Display(Name = "Nome")]
     public string Nome { get; set; }

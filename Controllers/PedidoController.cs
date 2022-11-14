@@ -1,10 +1,10 @@
-using Aula5.Data;
-using Aula5.Models;
+using controleEstoque.Data;
+using controleEstoque.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aula5.Controllers;
+namespace controleEstoque.Controllers;
 
 public class PedidoController : Controller
 {

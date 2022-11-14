@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Aula5.Models;
+namespace controleEstoque.Models;
 
 public class ProdutoModel
 {
@@ -31,4 +31,19 @@ public class ProdutoModel
 
     [Display(Name = "Categoria")]
     public CategoriaModel Categoria { get; set; }
+
+    [NotMapped]
+    [Required(ErrorMessage = "A imagem não foi enviada.")]
+    [Display(Name = "Arquivo de Imagem")]
+    public IFormFile ArquivoImagem { get; set; }
+
+    [NotMapped]
+    public string CaminhoImagem
+    {
+        get
+        {
+            var caminhoImagem = Path.Combine($"\\img\\produto\\", this.Id.ToString("D6") + ".jpg");
+            return caminhoImagem;
+        }
+    }
 }

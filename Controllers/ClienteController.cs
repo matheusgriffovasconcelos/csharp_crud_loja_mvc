@@ -1,10 +1,10 @@
 using System.Linq;
-using Aula5.Data;
-using Aula5.Models;
+using controleEstoque.Data;
+using controleEstoque.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-namespace Aula5.Controllers;
+namespace controleEstoque.Controllers;
 
 public class ClienteController : Controller
 {
@@ -77,11 +77,11 @@ public class ClienteController : Controller
         return RedirectToAction("Index");
     }
 
-   [HttpGet]
+    [HttpGet]
     public IActionResult Excluir(int id)
     {
         var clientes = _db.Clientes.Find(id);
-        if(clientes is null)
+        if (clientes is null)
         {
             return RedirectToAction("Index");
         }
@@ -92,7 +92,7 @@ public class ClienteController : Controller
     public IActionResult ProcessarExclusao(int id)
     {
         var clienteOriginal = _db.Clientes.Find(id);
-        if(clienteOriginal is null)
+        if (clienteOriginal is null)
         {
             return RedirectToAction("Index");
         }
